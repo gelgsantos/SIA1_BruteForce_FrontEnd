@@ -1,0 +1,125 @@
+/* Home Page Styles */
+.home-container {
+  max-width: 900px; /* Centered and constrained width */
+  margin: 120px auto 40px; /* Adjusted top margin to fit the fixed navbar */
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Clean font */
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+}
+
+/* Heading styles */
+.home-heading {
+  font-size: 36px; /* Impactful heading size */
+  color: #333; /* Dark text color for contrast */
+  font-weight: 700; /* Bold text for emphasis */
+  margin-bottom: 20px;
+  line-height: 1.4; /* Improved readability */
+}
+
+/* Message styles */
+.home-message {
+  font-size: 18px; /* Readable font size */
+  color: #666; /* Subtle gray for secondary text */
+  margin-top: 20px;
+  line-height: 1.6; /* Comfortable spacing */
+}
+
+/* Button container */
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button styles */
+.home-button {
+  padding: 12px 25px; /* Standard padding for buttons */
+  font-size: 16px; /* Readable font size */
+  background-color: #4CAF50; /* Vibrant green */
+  color: white;
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
+}
+
+.home-button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.home-button:active {
+  transform: translateY(0); /* Reset lift on click */
+}
+
+.home-button:focus {
+  outline: 3px solid #66bb6a; /* Outline on focus for better accessibility */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home-container {
+    max-width: 100%; /* Full width for smaller screens */
+    padding: 15px; /* Adjusted padding */
+  }
+
+  .home-heading {
+    font-size: 28px; /* Smaller heading for smaller screens */
+  }
+
+  .home-message {
+    font-size: 16px; /* Reduced font size for smaller screens */
+  }
+
+  .home-buttons {
+    flex-direction: column; /* Stack buttons on smaller screens */
+    gap: 10px;
+  }
+
+  .home-button {
+    width: 100%; /* Full-width buttons for smaller screens */
+  }
+}
+
+/* Navbar Styles */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;  /* Dark background for the navbar */
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  /* Ensures the navbar is always on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);  /* Subtle shadow for depth */
+}
+
+/* Navbar button styles */
+.nav-button {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-right: 30px;  /* Space between buttons */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #555;  /* Darker shade when hovering */
+  transform: scale(1.05);  /* Slight scale effect */
+}
+
+.nav-button:active {
+  transform: scale(1);  /* Reset scale on click */
+}
+
+.nav-button:focus {
+  outline: 3px solid #66bb6a;  /* Outline on focus for better accessibility */
+}

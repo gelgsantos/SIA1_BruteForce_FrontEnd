@@ -1,0 +1,217 @@
+/* General navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #333;
+  position: relative;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #555;
+}
+
+/* Dropdown styles */
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  background-color: #555;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 150px;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+/* Modal Styling */
+.modal-header {
+  border-bottom: 2px solid #007bff;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-header .btn-close:hover {
+  color: #007bff;
+}
+
+.modal-body {
+  font-size: 1.1rem;
+  padding: 20px;
+  color: #333;
+}
+
+.modal-body p {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #ddd;
+  padding: 15px;
+}
+
+.modal-footer .mdb-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .mdb-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Overlay */
+.MDBModal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Centered Modal with fixed size */
+.MDBModal {
+  z-index: 1050 !important;
+  max-width: 500px;        /* Set maximum width */
+  width: 100%;             /* Ensure it adapts to screen size but with max-width */
+  margin: 100px auto 20px auto;  /* Increased margin-top for more space between modal and navbar */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: block;          /* Ensure it's visible */
+  opacity: 0;              /* Start invisible */
+  transform: scale(0.7);   /* Start small */
+  animation: modalAppear 0.3s forwards; /* Animation to appear */
+}
+
+/* Animation for the modal to appear smoothly */
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal for smaller devices */
+@media (max-width: 576px) {
+  .MDBModal {
+    width: 90%;
+    margin: 20px;
+  }
+
+  .modal-header .btn-close {
+    font-size: 1.2rem;
+  }
+
+  .modal-footer .mdb-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Button Styling */
+.mdb-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* General Typography */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.MDBModal {
+  z-index: 1050 !important;
+}

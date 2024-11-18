@@ -1,0 +1,62 @@
+/* Container for the files */
+.files-container {
+  max-width: 900px; /* Slightly wider container for better use of space */
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Table styling */
+.files-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px; /* Increased space from container */
+  font-size: 16px; /* Standard font size for readability */
+}
+
+/* Table header */
+.files-table th {
+  background-color: #f4f4f4; /* Light gray background for header */
+  color: #333; /* Darker text for header */
+  padding: 12px;
+  font-weight: 600; /* Bold for clarity */
+  text-align: left;
+  border-bottom: 2px solid #ddd; /* Subtle bottom border for separation */
+}
+
+/* Table rows */
+.files-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.files-table tr:hover td {
+  background-color: #f7f7f7; /* Light gray hover effect */
+}
+
+/* Styling for error message */
+.error-message {
+  color: #e74c3c; /* Red color for error message */
+  font-weight: 600;
+  font-size: 16px; /* Slightly larger for better visibility */
+  margin-top: 20px; /* Space between table and error message */
+  text-align: center; /* Center alignment for better readability */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .files-container {
+    max-width: 100%; /* Full width for smaller screens */
+    padding: 15px; /* Reduced padding */
+  }
+  
+  .files-table th, .files-table td {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
